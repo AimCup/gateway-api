@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 10000
 spring:
   application:
     name: GATEWAY-SERVICE
@@ -10,10 +10,6 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: discord-service-route
-          uri: lb://DISCORD-SERVICE
-          predicates:
-            - Path=/api/discord-service/**
         - id: tournament-service-route
           uri: lb://TOURNAMENT-SERVICE
           predicates:
