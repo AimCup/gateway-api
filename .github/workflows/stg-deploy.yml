@@ -1,0 +1,17 @@
+name: Deploy to Staging
+
+on:
+  pull_request:
+    branches:
+      - stage
+    types: [closed]
+
+jobs:
+  build:
+    runs-on:
+      group: Default
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
+        docker-compose -f docker/stg/stg-deploy-job.yml up -d --build
