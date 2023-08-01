@@ -3,10 +3,10 @@ version: '3.8'
 services:
   gateway-api:
     build:
-      context: ./
-      dockerfile: Dockerfile
+      context: ../..
+      dockerfile: docker/stg/stg-deploy.Dockerfile
     ports:
-      - "10000:10000"
+      - "10002:10002"
 
 networks:
   default:
