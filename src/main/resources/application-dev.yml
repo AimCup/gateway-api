@@ -13,7 +13,7 @@ spring:
         - id: tournament-service-route
           uri: lb://TOURNAMENT-SERVICE
           predicates:
-            - Path=/api/tournament/**
+            - Path=/tournament/**
 eureka:
   client:
     service-url:
