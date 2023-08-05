@@ -10,8 +10,8 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: tournament-service-route
-          uri: lb://TOURNAMENT-SERVICE
+        - id: tournament-microservice-route
+          uri: lb://TOURNAMENT-MICROSERVICE
           predicates:
             - Path=/tournament/**
 eureka:
